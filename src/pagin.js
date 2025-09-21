@@ -61,7 +61,7 @@ const Pagin = () => {
           </table>
         
 
-        <div>
+        <div style={{ marginTop: "15px", textAlign: "center" }}>
 
             <button
             onClick={() => setCurrPage((p) => Math.max(p-1,1))}
@@ -70,13 +70,11 @@ const Pagin = () => {
              Previous
             </button>
 
-            {/* <span>
-                 {currPage}
-            </span> */}
+           
 
-             <span data-testid="current-page">{currPage}</span>
+             <button data-testid="current-page">{currPage}</button>
 
-            <button className="active">{currPage}</button>
+   
 
              <button
             onClick={() => setCurrPage((p) => Math.min(p+1,total_page))}
