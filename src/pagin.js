@@ -15,7 +15,8 @@ const Pagin = () => {
         const data = await response.json();
         setEmployees(data);
       } catch (error) {
-        console.log("failed to fetch data.");
+        console.error(error)
+        alert("Failed to fetch data");
       }
     };
 
@@ -64,18 +65,18 @@ const Pagin = () => {
 
             <button
             onClick={() => setCurrPage((p) => Math.max(p-1,1))}
-            
+              disabled={currPage === 1}
             >
              Previous
             </button>
 
             <span>
-                Page {currPage} of {total_page}
+                 {currPage}
             </span>
 
              <button
             onClick={() => setCurrPage((p) => Math.min(p+1,total_page))}
-            
+             disabled={currPage === total_page}
             >
              Next
             </button>
