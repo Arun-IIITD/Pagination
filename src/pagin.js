@@ -70,9 +70,13 @@ const Pagin = () => {
              Previous
             </button>
 
-            <span>
+            {/* <span>
                  {currPage}
-            </span>
+            </span> */}
+
+             <span data-testid="current-page">{currPage}</span>
+
+            <button className="active">{currPage}</button>
 
              <button
             onClick={() => setCurrPage((p) => Math.min(p+1,total_page))}
