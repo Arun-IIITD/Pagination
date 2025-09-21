@@ -72,7 +72,20 @@ const Pagin = () => {
 
            
 
-             <button data-testid="current-page">{currPage}</button>
+             <span
+          style={{
+            padding: "6px 12px",
+            borderRadius: "4px",
+            border: "1px solid #009879",
+            backgroundColor: "white",
+            color: "#009879",
+            fontWeight: "bold",
+            minWidth: "30px",
+            textAlign: "center",
+          }}
+        >
+          {currPage}
+        </span>
 
    
 
