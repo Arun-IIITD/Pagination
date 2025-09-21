@@ -73,7 +73,7 @@ const Pagin = () => {
             margin: "0 10px",
           }}
         >
-          {currPage}
+          "{currPage}"
         </span>
 
         <button
