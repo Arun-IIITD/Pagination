@@ -41,7 +41,7 @@ const Pagin = () => {
         </thead>
         <tbody>
           {curr_employee.map((emp) => (
-            <tr key={emp.id}>
+            <tr key={emp.id} data-testid={`employee-row-${emp.id}`}>
               <td>{emp.id}</td>
               <td>{emp.name}</td>
               <td>{emp.email}</td>
@@ -73,7 +73,7 @@ const Pagin = () => {
             margin: "0 10px",
           }}
         >
-          "{currPage}"
+          {currPage}
         </span>
 
         <button
