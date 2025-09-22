@@ -28,6 +28,8 @@ const Pagin = () => {
   const curr_employee = employees.slice(index_first_pg, index_last_pg);
   const total_page = Math.ceil(employees.length / emp_per_page);
 
+   console.log("Current Page:", currPage, " / Total Pages:", total_page);
+
   return (
     <>
       <h2>Employee Data Table</h2>
@@ -54,11 +56,13 @@ const Pagin = () => {
 
       <div style={{ marginTop: "15px", textAlign: "center" }}>
         <button
-          onClick={() => setCurrPage((p) => Math.max(p - 1, 1))}
+          onClick={() => setCurrPage((e) => Math.max(e - 1, 1))}
           disabled={currPage === 1}
         >
           Previous
         </button>
+
+        
 
         <span
           style={{
@@ -78,12 +82,17 @@ const Pagin = () => {
 
         </span>
 
+        
+        
+
         <button
-          onClick={() => setCurrPage((p) => Math.min(p + 1, total_page))}
+          onClick={() => setCurrPage((e) => Math.min(e + 1, total_page))}
           disabled={currPage === total_page}
         >
           Next
         </button>
+        
+        
       </div>
     </>
   );
