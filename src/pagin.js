@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 const Pagin = () => {
   const [employees, setEmployees] = useState([]);
   const [currPage, setCurrPage] = useState(1);
+  let count  =0;
   const emp_per_page = 10;
 
   useEffect(() => {
@@ -74,6 +75,7 @@ const Pagin = () => {
           }}
         >
           {currPage}
+
         </span>
 
         <button
