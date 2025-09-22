@@ -32,7 +32,7 @@ const Pagin = () => {
 
   return (
     <>
-      <h2>Employee Data Table</h2>
+      <h1>Employee Data Table</h1>
       <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
           <tr>
@@ -87,7 +87,7 @@ const Pagin = () => {
 
         <button
           onClick={() => setCurrPage((e) => Math.min(e + 1, total_page))}
-          disabled={currPage === total_page}
+          disabled={currPage >= total_page}
         >
           Next
         </button>
